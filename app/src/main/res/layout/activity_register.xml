@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/join_gender"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="411dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/register"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/join_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/join_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/join_email"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/join_email"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/join_password"
+        app:layout_constraintEnd_toStartOf="@+id/check_button"
+        app:layout_constraintStart_toStartOf="@+id/join_name" />
+
+
+    <EditText
+        android:id="@+id/join_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/join_pwck"
+        app:layout_constraintStart_toStartOf="@+id/join_email" />
+
+    <EditText
+        android:id="@+id/join_pwck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/check_passwd"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/join_bonth"
+        app:layout_constraintStart_toStartOf="@+id/join_password" />
+
+    <TextView
+        android:id="@+id/join_bonth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center_vertical"
+        android:hint="@string/born_hint"
+        app:layout_constraintBottom_toTopOf="@+id/join_rdogroup"
+        app:layout_constraintEnd_toEndOf="@+id/join_pwck"
+        app:layout_constraintStart_toStartOf="@+id/join_pwck" />
+
+    <RadioGroup
+
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="100dp"
+        app:layout_constraintBottom_toTopOf="@id/join_phone"
+        app:layout_constraintStart_toStartOf="@+id/join_bonth"
+
+        android:id="@+id/join_rdogroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/join_gender_m"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/join_gender_f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/femaile"/>
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/join_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/join_qustion_linear"
+        app:layout_constraintStart_toStartOf="@+id/join_pwck" />
+
+
+    <LinearLayout
+        android:id="@+id/join_qustion_linear"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/join_ancer"
+        app:layout_constraintStart_toStartOf="@+id/join_pwck"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="4"
+            android:text="@string/qustion"/>
+        <Spinner
+            android:id="@+id/join_qustion"
+            android:maxLines="2"
+            tools:ignore="MissingConstraints"
+            android:entries="@array/pass_qustion"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/join_ancer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/answer"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/join_qustion_linear"
+        app:layout_constraintStart_toStartOf="@+id/join_qustion_linear" />
+
+    <Button
+        android:id="@+id/check_button"
+        style="@style/defaultButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="97dp"
+        android:text="@string/comit"
+        app:layout_constraintBaseline_toBaselineOf="@+id/join_email"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/delete"
+        android:text="@string/cancel"
+        style="@style/defaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+
+        app:layout_constraintBaseline_toBaselineOf="@+id/join_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/join_button"
+        android:text="@string/register_commit"
+     style="@style/defaultButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="36dp"
+    android:layout_marginTop="20dp"
+    app:layout_constraintStart_toEndOf="@+id/delete"
+    app:layout_constraintTop_toBottomOf="@+id/join_ancer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
