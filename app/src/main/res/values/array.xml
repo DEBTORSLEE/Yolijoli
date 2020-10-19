@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pass_qustion">
+        <item>기억에 남는 추억의 장소는?</item>
+        <item>자신의 인생 좌우명은?</item>
+        <item>가장 기억에 남는 선생님 성함은?</item>
+        <item>타인이 모르는 신체 비밀이 있다면?</item>
+        <item>받았던 선물 중 기억에 남는 독특한 선물은?</item>
+        <item>유년시절 가장 생각나는 친구 이름은?</item>
+        <item>인상 깊게 읽은 책 이름은?</item>
+        <item>읽은 책 중에서 좋아하는 구절이 있다면?</item>
+        <item>자신이 두 번째로 존경하는 인물은?</item>
+        <item>친구들에게 공개하지 않은 어릴 적 별명이 있다면?</item>
+        <item>초등학교 때 기억에 남는 짝꿍 이름은?</item>
+        <item>다시 태어나면 되고 싶은 것은?</item>
+        <item>내가 좋아하는 캐릭터는?</item>
+    </string-array>
+
+</resources>
